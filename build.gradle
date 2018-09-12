@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+war.archiveName 'spring-app.war'
+
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-security')
+    compile("org.springframework.boot:spring-boot-starter-security:2.0.3.RELEASE")
+    compile 'org.springframework.boot:spring-boot-starter-web:2.0.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa:2.0.1.RELEASE'
+    compile 'mysql:mysql-connector-java:8.0.11'
+    compile 'org.apache.commons:commons-dbcp2:2.1.1'
+    compile 'javax.xml.bind:jaxb-api:2.3.0'
+}
+
